@@ -35,6 +35,7 @@
   <ItemGroup>
     <ClInclude Include="CBatterie.h" />
     <ClInclude Include="CCapteur.h" />
+    <ClInclude Include="CComande.h" />
     <ClInclude Include="CCompas.h" />
     <ClInclude Include="CMesure.h" />
     <ClInclude Include="CMoteur.h" />
@@ -43,6 +44,7 @@
   <ItemGroup>
     <ClCompile Include="CBatterie.cpp" />
     <ClCompile Include="CCapteur.cpp" />
+    <ClCompile Include="CComande.cpp" />
     <ClCompile Include="CCompas.cpp" />
     <ClCompile Include="CMesure.cpp" />
     <ClCompile Include="CMoteur.cpp" />
