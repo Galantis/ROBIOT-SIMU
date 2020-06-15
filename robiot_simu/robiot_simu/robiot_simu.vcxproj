@@ -33,11 +33,17 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="CBatterie.h" />
+    <ClInclude Include="CCapteur.h" />
+    <ClInclude Include="CCompas.h" />
     <ClInclude Include="CMesure.h" />
     <ClInclude Include="CMoteur.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CBatterie.cpp" />
+    <ClCompile Include="CCapteur.cpp" />
+    <ClCompile Include="CCompas.cpp" />
     <ClCompile Include="CMesure.cpp" />
     <ClCompile Include="CMoteur.cpp" />
     <ClCompile Include="test.cpp" />
@@ -50,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Qualité Logiciel_text_" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
