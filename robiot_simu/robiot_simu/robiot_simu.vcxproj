@@ -33,10 +33,12 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClInclude Include="CBatterie.h" />
     <ClInclude Include="CMesure.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CBatterie.cpp" />
     <ClCompile Include="CMesure.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
