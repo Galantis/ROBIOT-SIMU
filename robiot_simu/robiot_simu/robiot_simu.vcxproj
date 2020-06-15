@@ -34,10 +34,12 @@
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
     <ClInclude Include="CMesure.h" />
+    <ClInclude Include="CMoteur.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CMesure.cpp" />
+    <ClCompile Include="CMoteur.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
