@@ -1,0 +1,42 @@
+CMesure - Pilote d’outil de mesure forestier  (Added)
+
+    Data
+
+    Constructeur/Destructeur CMesure
+    DoMesure
+
+CCompas – Capteur de géolocalisation du ROBIOT (Added)
+
+    Coordonnées
+
+    Constructeur/Destructeur CCompas
+    GetGeoLoc
+    SetGeoLoc
+
+CBatterie – Capteur de niveau de charge de la batterie du ROBIOT  (Added)
+
+    Batterie
+
+    Constructeur/Destructeur CBatterie
+    GetChargeBatterie
+
+CMoteur – Pilote du couple de moteur du châssis  (Added)
+
+    Constructeur/Destructeur CMoteur
+    DoMove
+
+CCapteur – Capteur de signaux balise (Bordures de terrain, Obstacles, Arbres)  (Added)
+
+    Capteurs
+
+    Constructeur/Destructeur CCapteur
+    GetPresenceCapteur
+
+CCommande – Boîtier de commande (Fourniture des listes d’arbres à contrôler) (Added)
+    
+    Do move
+    
+
+    Constructeur/Destructeur CCommande
+    AddCoordonée 
+    PrintCoordonnées 
