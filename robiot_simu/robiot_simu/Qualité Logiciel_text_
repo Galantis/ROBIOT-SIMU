@@ -1,11 +1,11 @@
-CMesure - Pilote d’outil de mesure forestier  (Added)
+CMesure - Pilote d’outil de mesure forestier  (Added) Raph
 
     Data
 
     Constructeur/Destructeur CMesure
     DoMesure
 
-CCompas – Capteur de géolocalisation du ROBIOT (Added)
+CCompas – Capteur de géolocalisation du ROBIOT (Added) Raph
 
     Coordonnées
 
@@ -13,26 +13,26 @@ CCompas – Capteur de géolocalisation du ROBIOT (Added)
     GetGeoLoc
     SetGeoLoc
 
-CBatterie – Capteur de niveau de charge de la batterie du ROBIOT  (Added)
+CBatterie – Capteur de niveau de charge de la batterie du ROBIOT  (Added) Val
 
     Batterie
 
     Constructeur/Destructeur CBatterie
     GetChargeBatterie
 
-CMoteur – Pilote du couple de moteur du châssis  (Added)
+CMoteur – Pilote du couple de moteur du châssis  (Added) Val
 
     Constructeur/Destructeur CMoteur
     DoMove
 
-CCapteur – Capteur de signaux balise (Bordures de terrain, Obstacles, Arbres)  (Added)
+CCapteur – Capteur de signaux balise (Bordures de terrain, Obstacles, Arbres)  (Added) Lulu
 
     Capteurs
 
     Constructeur/Destructeur CCapteur
     GetPresenceCapteur
 
-CCommande – Boîtier de commande (Fourniture des listes d’arbres à contrôler) (Added)
+CCommande – Boîtier de commande (Fourniture des listes d’arbres à contrôler) (Added) Lulu
     
     Do move
     
