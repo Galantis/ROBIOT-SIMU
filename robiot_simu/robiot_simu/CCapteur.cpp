@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "CCapteur.h"
 /**************************************************************
-* CLASSE : <CCommande>
-* PRESENTATION : <description de la classe et de sa fonction>
+* CLASSE : <CCapteur>
+* PRESENTATION : <Capteur de signaux balise (bordures de terrain, obstacles, arbres)>
 *
 * METHODES PUBLIQUES : * <Methode1> : <description rapide de la methode 1>
 * <Methode2> : <description rapide de la methode 2>

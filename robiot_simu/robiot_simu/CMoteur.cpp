@@ -2,7 +2,7 @@
 #include "CMoteur.h"
 /**************************************************************
 * CLASSE : <CMoteur>
-* PRESENTATION : <description de la classe et de sa fonction>
+* PRESENTATION : <Pilote le couple du moteur du châssis>
 *
 * METHODES PUBLIQUES : * <Methode1> : <description rapide de la methode 1>
 * <Methode2> : <description rapide de la methode 2>

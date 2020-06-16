@@ -6,3 +6,6 @@
 #pragma once
 
 #include "gtest/gtest.h"
+
+using std::cout;
+using namespace std;

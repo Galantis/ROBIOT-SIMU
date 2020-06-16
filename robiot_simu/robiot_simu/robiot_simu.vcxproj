@@ -60,6 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Cartographie_Terrain.txt" />
+    <Text Include="Liste_De_Controle.txt" />
+    <Text Include="NewFile.txt" />
     <Text Include="Qualité Logiciel_text_" />
   </ItemGroup>
   <ItemDefinitionGroup />
