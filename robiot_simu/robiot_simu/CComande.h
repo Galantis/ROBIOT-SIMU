@@ -1,14 +1,27 @@
 #pragma once
+
+#define SIZE_MAX_X 255
+#define SIZE_MAX_Y 255
+#define NBR_ARBRE 50
+
 class CComande
 {
-	int I_SIZE_MAX_X, I_SIZE_MAX_Y; //I_Size_Max vaut actuellement 55 et I_SIZE_MAX_Y=15
-	
-};
-	CComande(); //Constructeur de CCapteur
+private:
+	int i_size_max_X; //i_size_max_X =55
+	int i_size_max_Y; //i_size_max_Y =15 
+	char C_Cartographie[SIZE_MAX_X][SIZE_MAX_Y];
+	int i_Arbres_cordonne[NBR_ARBRE][2];
+
+public:
+	CComande(); //Constructeur de cCCapteur
 	CComande(int i_X, int i_Y); //Constructeur de CComande
 	~CComande(); //Destructeur de CBattery
-	int i_GetStateBatterie(); // retourne la valeur StateBattery
-	bool f_SetStateBatterie(int i_St); // Met à jour la valeur StateBattery. Retourne vrai si StateBattery a été mise à jour et faux sinon
-	int i_GetDataBatterie(); // retourne la valeur MesureBattery
-	bool f_SetDataBatterie(); //Met à jour la valeur de MesureBattery. Retourne vrai si MesureBattery a été mise à jour et faux sinon
-	bool f_GetChargeBatterie(); //Fait la mesure. Retourne vrai si DoM
+	int i_retour_size_max_X();
+	int i_retour_size_max_Y();
+	bool Ouverturefichier_cartographie();	// ouvre le fichier : Cartographie terrain
+	bool Ouverturefichier_nbr_arbre();		// ouvre le fichier : cordonne des arbres 
+	bool f_SetCartographie(int i_coordX, int i_coordY, char i_val); //set a val dans le tableau
+	char c_GetCartographie(int i_coordX, int i_coordY); // récupère la valeur dans le tableau
+	bool c_Get_nbr_arbre_X(int i_coordX, int i_coordY, char i_val); //set a val dans le tableau
+	char c_GetCartographie(int i_coordX, int i_coordY); // récupère la valeur dans le tableau
+};

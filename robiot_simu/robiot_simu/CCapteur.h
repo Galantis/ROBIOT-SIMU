@@ -1,12 +1,12 @@
 #pragma once
 class CCapteur
 {
-	
+private:
 
 public:
 	CCapteur(); //Constructeur de CCapteur
-	CBatterie(int i_St, int i_Mes); //Constructeur de CBattery
-	~CBatterie(); //Destructeur de CBattery
+	CCapteur(int i_St, int i_Mes); //Constructeur de CBattery
+	~CCapteur(); //Destructeur de CBattery
 	int i_GetStateBatterie(); // retourne la valeur StateBattery
 	bool f_SetStateBatterie(int i_St); // Met à jour la valeur StateBattery. Retourne vrai si StateBattery a été mise à jour et faux sinon
 	int i_GetDataBatterie(); // retourne la valeur MesureBattery

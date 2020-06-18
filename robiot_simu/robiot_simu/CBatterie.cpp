@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CBatterie.h"
-#include <time.h>
+#include <chrono>
+#include <windows.h>
 #include <cstdlib>
 #include <iostream>
 #define TIME 1 //Simul temps d'attente de 1 min
@@ -72,7 +73,7 @@ bool CBatterie::f_GetChargeBatterie()
 {
 	int val;
 
-	_sleep(TIME);
+	Sleep(TIME);
 
 	val = rand();
 

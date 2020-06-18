@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CMesure.h"
-#include <time.h>
+#include <chrono>
+#include <windows.h>
 #include <cstdlib>
 #include <iostream>
 /**************************************************************
@@ -71,9 +72,13 @@ bool CMesure::f_DoMesure()
 {
 	int val;
 
-	_sleep(TIME);
+	f_SetStateMesure(1);
+
+	Sleep(TIME);
 
 	val = rand();
+
+	f_SetStateMesure(0);
 
 	return f_SetDataMesure(val);
 }
