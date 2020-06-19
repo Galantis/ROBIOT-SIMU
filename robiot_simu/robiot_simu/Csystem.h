@@ -26,6 +26,6 @@ public:
 	CComande* getCommande();
 	CMesure* getMesure();
 	CMoteur* getMoteur();
-
+	bool f_moveRobot(CMoteur* p_moteur, CCompas* p_compas, CComande* p_commande);
 };
 

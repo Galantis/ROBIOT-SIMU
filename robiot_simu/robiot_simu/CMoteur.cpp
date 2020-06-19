@@ -19,30 +19,31 @@ CMoteur::CMoteur(int i_DataX,int i_DataY, bool Instruc_Move)
 	Move=Instruc_Move;
 }
 
+/*
 bool CMoteur::f_Move(int X,int Y, char XorY, bool Forward);
 {
 	
-	if Forward = True
+	if(Forward == True)
 	{
-		if (XorY = "x")
+		if (XorY == "x")
 		{
 			x++;
 		}
-		if (XorY = "y")
+		else if (XorY == "y")
 		{
 			y++;
 		}
 	}
 	else
 	{
-		if (XorY = "x")
+		if (XorY == "x")
 		{
 			x--;
 		}
-		if (XorY = "y")
+		if (XorY == "y")
 		{
 			y--;
 		}
 	}
 	return true;
-}
+}*/
