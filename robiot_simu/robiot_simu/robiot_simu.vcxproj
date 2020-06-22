@@ -39,7 +39,6 @@
     <ClInclude Include="CCompas.h" />
     <ClInclude Include="CMesure.h" />
     <ClInclude Include="CMoteur.h" />
-    <ClInclude Include="Csystem.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -49,7 +48,6 @@
     <ClCompile Include="CCompas.cpp" />
     <ClCompile Include="CMesure.cpp" />
     <ClCompile Include="CMoteur.cpp" />
-    <ClCompile Include="Csystem.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

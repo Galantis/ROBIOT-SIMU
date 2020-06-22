@@ -1,14 +1,32 @@
 #pragma once
-class CMoteur
+#include "pch.h"
+
+#include "CBatterie.h"
+#include "CCompas.h"
+#include "CCapteur.h"
+#include "CComande.h"
+#include "CMesure.h"
+
+class CMoteur : public CBatterie, public CCompas, public CCapteur, public CComande, public CMesure
 {
 private:
 	int i_X;
 	int i_Y;
 	bool Move;
+	CBatterie batterie;
+	CCompas compas;
+	CCapteur capteur;
+	CComande commande;
+	CMesure mesure;
 public:
 	CMoteur();//Constructeur de CMesure
 	CMoteur(int i_DataX,int i_DataY, bool Instruc_Move);//Constructeur de CMoteur
 	~CMoteur();//Destructeur de CMoteur
-	bool f_Move(); // Deplace le robot. Retourne vrai si la position finale est bien la position souhaité sinon faux
+	CBatterie* getBatterie();
+	CCompas* getCompas();
+	CCapteur* getCapteur();
+	CComande* getCommande();
+	CMesure* getMesure();
+	bool f_moveRobot(CCapteur* p_capteur, CCompas* p_compas, CComande* p_commande);
 };
 

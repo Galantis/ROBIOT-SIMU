@@ -25,3 +25,14 @@ TEST(TestCaseName, TestName) {
 	EXPECT_EQ(1, 1);
 	EXPECT_TRUE(true);
 }
+
+TEST(TestCaseName2, TestName) {
+	CMesure mesure;
+
+	mesure.f_DoMesure();
+
+	cout << mesure.i_GetDataMesure() << endl;
+
+	EXPECT_EQ(1, 1);
+	EXPECT_TRUE(true);
+}

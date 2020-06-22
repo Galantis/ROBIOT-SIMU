@@ -6,13 +6,17 @@
 #include <iostream>
 /**************************************************************
 * CLASSE : <CMesure>
-* PRESENTATION : <description de la classe et de sa fonction>
+* PRESENTATION : <Pilote d’outil de mesure forestier>
 *
-* METHODES PUBLIQUES : * <Methode1> : <description rapide de la methode 1>
-* <Methode2> : <description rapide de la methode 2>
-* <Methode3> : <description rapide de la methode 3>
-* <Methode4> : <description rapide de la methode 4>
-*
+* METHODES PUBLIQUES :
+* CMesure() : Constructeur de CMesure
+* CMesure(int i_St,int i_Dt) : Constructeur de CMesure
+* ~CMesure() : Destructeur de CMesure
+* int i_GetStateMesure() : Retourne la valeur StateMesure
+* bool f_SetStateMesure(int i_St) : Met à jour la valeur StateMesure. Retourne vrai si StateMesure a été mise à jour et faux sinon
+* int i_GetDataMesure() : Retourne la valeur de DataMesure
+* bool f_SetDataMesure(int i_Dt) : Met à jour la valeur de DataMesure. Retourne vrai si DataMesure a été mise à jour et faux sinon
+* bool f_DoMesure() : Fait la mesure. Retourne vrai si DoMesure a été effectué la mesure et faux sinon
 * OBSERVATIONS : **************************************************************/
 
 CMesure::CMesure() : i_StateMesure(0), i_DataMesure(0)

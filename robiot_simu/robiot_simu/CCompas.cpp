@@ -4,11 +4,14 @@
 * CLASSE : <CCompas>
 * PRESENTATION : <description de la classe et de sa fonction>
 *
-* METHODES PUBLIQUES : * <Methode1> : <description rapide de la methode 1>
-* <Methode2> : <description rapide de la methode 2>
-* <Methode3> : <description rapide de la methode 3>
-* <Methode4> : <description rapide de la methode 4>
-*
+* METHODES PUBLIQUES : 
+* CCompas() : Constructeur de CCompas
+* CCompas(int i_CX, int i_CY) : Constructeur de CCompas
+* ~CCompas() : Destructeur de CCompas
+* int i_GetCoordX() : Retourne la valeur CoordX
+* bool f_SetCoordX(int i_CX) : Met à jour la valeur CoordX. Retourne vrai si CoordX a été mise à jour et faux sinon
+* int i_GetCoordY() : Retourne la valeur de CoordY
+* bool f_SetCoordY(int i_CY) : Met à jour la valeur de CoordY. Retourne vrai si CoordY a été mise à jour et faux sinon
 * OBSERVATIONS : **************************************************************/
 
 CCompas::CCompas() : i_CoordX(0), i_CoordY(0)

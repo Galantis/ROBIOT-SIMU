@@ -5,45 +5,138 @@
 * CLASSE : <CMoteur>
 * PRESENTATION : <Pilote le couple du moteur du châssis>
 *
-* METHODES PUBLIQUES : * <Methode1> : <description rapide de la methode 1>
-* <Methode2> : <description rapide de la methode 2>
-* <Methode3> : <description rapide de la methode 3>
-* <Methode4> : <description rapide de la methode 4>
-*
+* METHODES PUBLIQUES :  
+* CMoteur() : Constructeur de CMoteur
+* CMoteur(int i_DataX,int i_DataY, bool Instruc_Move) : Constructeur de CMoteur
+* ~CMoteur() : Destructeur de CMoteur
+* CBatterie* getBatterie() : 
+* CCompas* getCompas() : 
+* CCapteur* getCapteur() : 
+* CComande* getCommande() : 
+* CMesure* getMesure() : 
+* bool f_moveRobot(CCompas* p_compas, CComande* p_commande) : 
 * OBSERVATIONS : **************************************************************/
 
-CMoteur::CMoteur(int i_DataX,int i_DataY, bool Instruc_Move)
+CMoteur::CMoteur()
 {
-	i_X=i_DataX;
-	i_Y=i_DataY;
-	Move=Instruc_Move;
+	batterie = CBatterie();
+	compas = CCompas();
+	capteur = CCapteur();
+	commande = CComande();
+	mesure = CMesure();
 }
 
-/*
-bool CMoteur::f_Move(int X,int Y, char XorY, bool Forward);
+CMoteur::CMoteur(int i_DataX, int i_DataY, bool Instruc_Move)
 {
-	
-	if(Forward == True)
+	i_X = i_DataX;
+	i_Y = i_DataY;
+	Move = Instruc_Move;
+}
+
+CMoteur::~CMoteur()
+{
+}
+
+CBatterie* CMoteur::getBatterie()
+{
+	return &batterie;
+}
+
+CCompas* CMoteur::getCompas()
+{
+	return &compas;
+}
+
+CCapteur* CMoteur::getCapteur()
+{
+	return &capteur;
+}
+
+CComande* CMoteur::getCommande()
+{
+	return &commande;
+}
+
+CMesure* CMoteur::getMesure()
+{
+	return &mesure;
+}
+
+bool CMoteur::f_moveRobot(CCapteur* p_capteur, CCompas* p_compas, CComande* p_commande)
+{
+	int destX = p_commande->f_Get_abres_cordonne_X();
+	int destY = p_commande->f_Get_abres_cordonne_Y();
+	int posX = p_compas->i_GetCoordX();
+	int posY = p_compas->i_GetCoordY();
+	int acutalL = p_commande->i_getActualLigne();
+
+	while ((posX != destX))
 	{
-		if (XorY == "x")
+		//passage d'obstacles
+		if ((p_capteur->c_GetCartographie(posX + 1, posY) == 0x58/*X*/))
 		{
-			x++;
+			if ((p_capteur->c_GetCartographie(posX, posY + 1) != 0x58/*X*/))
+			{
+				p_compas->f_SetCoordY(posY + 1);
+
+				while ((p_capteur->c_GetCartographie(posX + 1, posY - 1) == 0x58/*X*/))
+				{
+					p_compas->f_SetCoordX(posX + 1);
+				}
+
+				p_compas->f_SetCoordY(posY - 1);
+			}
+			else if ((p_capteur->c_GetCartographie(posX, posY - 1) != 0x58/*X*/))
+			{
+				p_compas->f_SetCoordY(posY - 1);
+
+				while ((p_capteur->c_GetCartographie(posX + 1, posY + 1) == 0x58/*X*/))
+				{
+					p_compas->f_SetCoordX(posX + 1);
+				}
+
+				p_compas->f_SetCoordY(posY + 1);
+			}
 		}
-		else if (XorY == "y")
+		else
 		{
-			y++;
+			p_compas->f_SetCoordX(posX + 1);
 		}
 	}
-	else
+
+	while ((posY != destY))
 	{
-		if (XorY == "x")
+		//passage d'obstacles
+		if ((p_capteur->c_GetCartographie(posX, posY + 1) == 0x58/*X*/))
 		{
-			x--;
+			if ((p_capteur->c_GetCartographie(posX + 1, posY) != 0x58/*X*/))
+			{
+				p_compas->f_SetCoordY(posX + 1);
+
+				while ((p_capteur->c_GetCartographie(posX - 1, posY + 1) == 0x58/*X*/))
+				{
+					p_compas->f_SetCoordX(posY + 1);
+				}
+
+				p_compas->f_SetCoordY(posX - 1);
+			}
+			else if ((p_capteur->c_GetCartographie(posX, posY - 1) != 0x58/*X*/))
+			{
+				p_compas->f_SetCoordY(posX - 1);
+
+				while ((p_capteur->c_GetCartographie(posX + 1, posY - 1) == 0x58/*X*/))
+				{
+					p_compas->f_SetCoordX(posY + 1);
+				}
+
+				p_compas->f_SetCoordY(posX + 1);
+			}
 		}
-		if (XorY == "y")
+		else
 		{
-			y--;
+			p_compas->f_SetCoordX(posX + 1);
 		}
 	}
-	return true;
-}*/
+
+	return false;
+}
