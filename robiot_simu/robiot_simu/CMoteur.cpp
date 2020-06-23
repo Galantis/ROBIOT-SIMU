@@ -31,42 +31,86 @@ CMoteur::CMoteur()
 	mesure = CMesure();
 }
 
-CMoteur::CMoteur(int i_DataX, int i_DataY, bool Instruc_Move)
-{
-	i_X = i_DataX;
-	i_Y = i_DataY;
-	Move = Instruc_Move;
-}
-
+/**
+* METHODE : <CMoteur>::<~CMoteur>
+* PRESENTATION : <Destructeur de CMoteur>
+*
+**/
 CMoteur::~CMoteur()
 {
 }
 
+/**
+* METHODE : <CMoteur>::<getBatterie>
+* PRESENTATION : <Recupère l'objet batterie>
+*
+* RETOUR : <CBatterie*> : <objet batterie>
+*
+**/
 CBatterie* CMoteur::getBatterie()
 {
 	return &batterie;
 }
 
+/**
+* METHODE : <CMoteur>::<getCompas>
+* PRESENTATION : <Recupère l'objet compas>
+*
+* RETOUR : <CCompas*> : <objet compas>
+*
+**/
 CCompas* CMoteur::getCompas()
 {
 	return &compas;
 }
 
+/**
+* METHODE : <CMoteur>::<getCapteur>
+* PRESENTATION : <Recupère l'objet capteur>
+*
+* RETOUR : <CCapteur*> : <objet capteur>
+*
+**/
 CCapteur* CMoteur::getCapteur()
 {
 	return &capteur;
 }
 
+/**
+* METHODE : <CMoteur>::<getCommande>
+* PRESENTATION : <Recupère l'objet commande>
+*
+* RETOUR : <CComande*> : <objet commande>
+*
+**/
 CComande* CMoteur::getCommande()
 {
 	return &commande;
 }
 
+/**
+* METHODE : <CMoteur>::<getMesure>
+* PRESENTATION : <Recupère l'objet mesure>
+*
+* RETOUR : <CMesure*> : <objet mesure>
+*
+**/
 CMesure* CMoteur::getMesure()
 {
 	return &mesure;
 }
 
+/**
+* METHODE : <CMoteur>::<f_moveRobot>
+* PRESENTATION : <Move the robot>
+*
+*	<p_capteur> : <objet capteur> *
+	<p_compas> : <objet compas> *
+	<p_commande> : <objet commande> *
+*
+* RETOUR : <bool> : <Si le robot à avancer avec succès>
+*
+**/
 bool CMoteur::f_moveRobot(CCapteur* p_capteur, CCompas* p_compas, CComande* p_commande)
 {
 	int destX = p_commande->f_Get_abres_cordonne_X();

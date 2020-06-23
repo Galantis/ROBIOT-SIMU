@@ -20,7 +20,6 @@ private:
 	CMesure mesure;
 public:
 	CMoteur();//Constructeur de CMesure
-	CMoteur(int i_DataX,int i_DataY, bool Instruc_Move);//Constructeur de CMoteur
 	~CMoteur();//Destructeur de CMoteur
 	CBatterie* getBatterie();
 	CCompas* getCompas();

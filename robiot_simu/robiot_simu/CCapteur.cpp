@@ -29,6 +29,24 @@ CCapteur::~CCapteur()
 {
 }
 
+
+/**
+* METHODE : <CComande>::<f_Set_abres_cordonne>
+* PRESENTATION : <initaliser le tableau i_arbres_cordonne>
+*
+* <i_coordX> : cordonée X du tableau
+* <i_coordY> : <cordonée Y du tableau>
+* <i_val> : <Valeur de la cordonnée>
+* 
+*
+* RETOUR : <0> : <Fonction BOOL return 0>
+* <valeur_2> : <signification>
+* <valeur_3> : <signification>
+*
+* EXCEPTIONS : <exception_1> : cas d'erreur 1
+*
+**/
+
 bool CCapteur::Ouverturefichier_cartographie()
 {
     //recuperation des limites de la cartographie
