@@ -17,6 +17,11 @@
 * bool f_moveRobot(CCompas* p_compas, CComande* p_commande) : 
 * OBSERVATIONS : **************************************************************/
 
+/**
+* METHODE : <CMoteur>::<CMoteur>
+* PRESENTATION : <Constructeur de CMoteur>
+*
+**/
 CMoteur::CMoteur()
 {
 	batterie = CBatterie();
