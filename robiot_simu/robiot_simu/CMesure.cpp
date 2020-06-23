@@ -19,26 +19,61 @@
 * bool f_DoMesure() : Fait la mesure. Retourne vrai si DoMesure a été effectué la mesure et faux sinon
 * OBSERVATIONS : **************************************************************/
 
+
+/**
+* METHODE : <CMesure>::<CMesure>
+* PRESENTATION : <Constructeur de CMesure>
+*
+**/
 CMesure::CMesure() : i_StateMesure(0), i_DataMesure(0)
 {
 
 }
 
+/**
+* METHODE : <CMesure>::<CMesure>
+* PRESENTATION : <Constructeur de CMesure>
+*
+*	<i_St> : <StateMesure> *
+	<i_Dt> : <DataMesure> *
+*
+**/
 CMesure::CMesure(int i_St, int i_Dt)
 {
 	i_StateMesure = i_St;
 	i_DataMesure = i_Dt;
 }
 
+/**
+* METHODE : <CMesure>::<~CMesure>
+* PRESENTATION : <Destructeur de CMesure>
+*
+**/
 CMesure::~CMesure()
 {
 }
 
+/**
+* METHODE : <CMesure>::<i_GetStateMesure>
+* PRESENTATION : <Get the mesure>
+*
+* RETOUR : <int> : <Value of the mesure>
+*
+**/
 int CMesure::i_GetStateMesure()
 {
 	return i_StateMesure;
 }
 
+/**
+* METHODE : <CMesure>::<f_SetStateMesure>
+* PRESENTATION : <set the state of the mesure>
+*
+*	<i_St> : <state de la mesure > *
+*
+* RETOUR : <bool> : <Si le robot le changement a été fait avec succes>
+*
+**/
 bool CMesure::f_SetStateMesure(int i_St)
 {
 	i_StateMesure = i_St;
@@ -53,11 +88,27 @@ bool CMesure::f_SetStateMesure(int i_St)
 	}
 }
 
+/**
+* METHODE : <CMesure>::<i_GetDataMesure>
+* PRESENTATION : <get dataMesure>
+*
+* RETOUR : <int> : <Value of DataMesure>
+*
+**/
 int CMesure::i_GetDataMesure()
 {
 	return i_DataMesure;
 }
 
+/**
+* METHODE : <CMesure>::<f_SetDataMesure>
+* PRESENTATION : <set DataMeruse>
+*
+*	<i_Dt> : <value of i_Dt to set DataMesure> *
+*
+* RETOUR : <bool> : <Si le robot le changement a été fait avec succes>
+*
+**/
 bool CMesure::f_SetDataMesure(int i_Dt)
 {
 	i_DataMesure = i_Dt;
@@ -72,6 +123,13 @@ bool CMesure::f_SetDataMesure(int i_Dt)
 	}
 }
 
+/**
+* METHODE : <CMesure>::<f_DoMesure>
+* PRESENTATION : <simulate the mesure>
+*
+* RETOUR : <bool> : <Si le robot le changement a été fait avec succes>
+*
+**/
 bool CMesure::f_DoMesure()
 {
 	int val;

@@ -36,7 +36,6 @@ CCapteur::~CCapteur()
 *
 * <i_coordX> : cordonée X du tableau
 *
-* 
 *
 * RETOUR : <0> : <Fonction BOOL return 0>
 * <valeur_2> : <signification>
@@ -81,7 +80,7 @@ bool CCapteur::Ouverturefichier_cartographie()
 
 /**
 * METHODE : <CCapteur>::<f_SetCartographie>
-* PRESENTATION : <initaliser le tableau i_arbres_cordonne>
+* PRESENTATION : <initaliser le tableau c_catogrpahie>
 * 
 *
 * RETOUR : <0> : <Fonction BOOL return 0>
@@ -97,36 +96,31 @@ bool CCapteur::f_SetCartographie(int i_coordX, int i_coordY, char i_val){
     return 0;
 }
 /**
-* METHODE : <CCapteur>::<Ouverturefichier_cartographie>
-* PRESENTATION : <initaliser le tableau i_arbres_cordonne>
+* METHODE : <CCapteur>::<c_GetCartographie>
+* PRESENTATION : <retourne l'objet suivant des coordonées rentrées>
 *
 * <i_coordX> : cordonée X du tableau
 * <i_coordY> : <cordonée Y du tableau>
 * <i_val> : <Valeur de la cordonnée>
 * 
 *
-* RETOUR : <0> : <Fonction BOOL return 0>
+* RETOUR : <C_Cartographie> : <Fonction BOOL return 0>
 * <valeur_2> : <signification>
 * <valeur_3> : <signification>
 *
 * EXCEPTIONS : <exception_1> : cas d'erreur 1
 *
 **/
-//retourne l'objet suivant des coordonées rentrées
 char CCapteur::c_GetCartographie(int i_coordX, int i_coordY){
     return C_Cartographie[i_coordX][i_coordY];
 }
 /**
-* METHODE : <CCapteur>::<Ouverturefichier_cartographie>
+* METHODE : <CCapteur>::<i_retour_size_max_X>
 * PRESENTATION : <initaliser le tableau i_arbres_cordonne>
 *
-* <i_coordX> : cordonée X du tableau
-* <i_coordY> : <cordonée Y du tableau>
-* <i_val> : <Valeur de la cordonnée>
-* 
 *
-* RETOUR : <0> : <Fonction BOOL return 0>
-* <valeur_2> : <signification>
+* 
+* <i_size_max_X> : <signification>
 * <valeur_3> : <signification>
 *
 * EXCEPTIONS : <exception_1> : cas d'erreur 1
@@ -137,16 +131,13 @@ int CCapteur::i_retour_size_max_X(){
     return i_size_max_X;
 }
 /**
-* METHODE : <CCapteur>::<Ouverturefichier_cartographie>
-* PRESENTATION : <initaliser le tableau i_arbres_cordonne>
+* METHODE : <CCapteur>::<i_retour_size_max_Y>
+* PRESENTATION : <retour de la size max y>
 *
-* <i_coordX> : cordonée X du tableau
-* <i_coordY> : <cordonée Y du tableau>
-* <i_val> : <Valeur de la cordonnée>
 * 
 *
-* RETOUR : <0> : <Fonction BOOL return 0>
-* <valeur_2> : <signification>
+
+* <i_size_max_Y> : <Size Y>
 * <valeur_3> : <signification>
 *
 * EXCEPTIONS : <exception_1> : cas d'erreur 1

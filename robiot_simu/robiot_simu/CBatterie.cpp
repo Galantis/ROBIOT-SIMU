@@ -20,10 +20,12 @@
 * bool f_GetChargeBatterie() : Fait la mesure. Retourne vrai si DoMesure a été effectué la mesure et faux sinon
 * OBSERVATIONS : **************************************************************/
 
+
 CBatterie::CBatterie() : i_StateBatterie(0), i_DataBatterie(0)
 {
 
 }
+
 
 CBatterie::CBatterie(int i_St, int i_Dt)
 {
@@ -40,6 +42,14 @@ int CBatterie::i_GetStateBatterie()
 	return i_StateBatterie;
 }
 
+
+/**
+* METHODE : <CBatterie>:::f_SetStateBatterie(int i_St)
+* PRESENTATION : <Met à jour la valeur de MesureBattery>
+*
+* RETOUR : <bool> : <renvoi vrai quand la valeur de StateBattery a était mise à jour >
+*
+**/
 bool CBatterie::f_SetStateBatterie(int i_St)
 {
 	i_StateBatterie = i_St;
@@ -54,11 +64,25 @@ bool CBatterie::f_SetStateBatterie(int i_St)
 	}
 }
 
+/**
+* METHODE : <CBatterie>::i_GetDataBatterie
+* PRESENTATION : <retourne la valeur de DataBatterie>
+*
+* RETOUR : <int> : <renvoi la valeur de MesureBattery>
+*
+**/
 int CBatterie::i_GetDataBatterie()
 {
 	return i_DataBatterie;
 }
 
+/**
+* METHODE : <CBatterie>::f_SetDataBatterie(int i_Dt)
+* PRESENTATION : <Met à jour la valeur de MesureBattery>
+*
+* RETOUR : <Bool> : <Retourne vrai si MesureBattery a été mise à jour et faux sinon>
+*
+**/
 bool CBatterie::f_SetDataBatterie(int i_Dt)
 {
 	i_DataBatterie = i_Dt;
@@ -73,6 +97,13 @@ bool CBatterie::f_SetDataBatterie(int i_Dt)
 	}
 }
 
+/**
+* METHODE : <CBatterie>::i_GetDataBatterie
+* PRESENTATION : <Fait la mesure>
+*
+* RETOUR : <bool> : <Retourne vrai si DoMesure a été effectué la mesure et faux sinon>
+*
+**/
 bool CBatterie::f_GetChargeBatterie()
 {
 	int val;
