@@ -16,8 +16,8 @@
 
 
 /**
-* METHODE : <CMoteur>::<CMoteur>
-* PRESENTATION : <Constructeur de CMoteur>
+* METHODE : <CCompas>::<CCompas>
+* PRESENTATION : <Constructeur de CCompas>
 *
 **/
 CCompas::CCompas() : i_CoordX(0), i_CoordY(0)
@@ -25,8 +25,11 @@ CCompas::CCompas() : i_CoordX(0), i_CoordY(0)
 }
 
 /**
-* METHODE : <CMoteur>::<CMoteur>
-* PRESENTATION : <Constructeur de CMoteur>
+* METHODE : <CCompas>::<CCompas>
+* PRESENTATION : <Constructeur de CCompas>
+*
+*	<i_CX> : <coordonnée x> *
+	<i_CY> : <coordonnée y> *
 *
 **/
 CCompas::CCompas(int i_CX, int i_CY)
@@ -36,8 +39,8 @@ CCompas::CCompas(int i_CX, int i_CY)
 }
 
 /**
-* METHODE : <CMoteur>::<CMoteur>
-* PRESENTATION : <Constructeur de CMoteur>
+* METHODE : <CCompas>::<~CCompas>
+* PRESENTATION : <Destructeur de CCompas>
 *
 **/
 CCompas::~CCompas()
@@ -45,14 +48,10 @@ CCompas::~CCompas()
 }
 
 /**
-* METHODE : <CMoteur>::<f_moveRobot>
-* PRESENTATION : <Move the robot>
+* METHODE : <CCompas>::<i_GetCoordX>
+* PRESENTATION : <Get the coordonnée X>
 *
-*	<p_capteur> : <objet capteur> *
-	<p_compas> : <objet compas> *
-	<p_commande> : <objet commande> *
-*
-* RETOUR : <bool> : <Si le robot à avancer avec succès>
+* RETOUR : <int> : <renvoi coord X>
 *
 **/
 int CCompas::i_GetCoordX()
@@ -61,14 +60,12 @@ int CCompas::i_GetCoordX()
 }
 
 /**
-* METHODE : <CMoteur>::<f_moveRobot>
-* PRESENTATION : <Move the robot>
+* METHODE : <CCompas>::<f_SetCoordX>
+* PRESENTATION : <set coord X>
 *
-*	<p_capteur> : <objet capteur> *
-	<p_compas> : <objet compas> *
-	<p_commande> : <objet commande> *
+*	<i_CX> : <value that is going to be set to coord X> *
 *
-* RETOUR : <bool> : <Si le robot à avancer avec succès>
+* RETOUR : <bool> : <Si le robot le changement a été fait avec succes>
 *
 **/
 bool CCompas::f_SetCoordX(int i_CX)
@@ -86,14 +83,10 @@ bool CCompas::f_SetCoordX(int i_CX)
 }
 
 /**
-* METHODE : <CMoteur>::<f_moveRobot>
-* PRESENTATION : <Move the robot>
+* METHODE : <CCompas>::<i_GetCoordY>
+* PRESENTATION : <Get the coordonnée y>
 *
-*	<p_capteur> : <objet capteur> *
-	<p_compas> : <objet compas> *
-	<p_commande> : <objet commande> *
-*
-* RETOUR : <bool> : <Si le robot à avancer avec succès>
+* RETOUR : <int> : <renvoi coord Y>
 *
 **/
 int CCompas::i_GetCoordY()
@@ -102,14 +95,12 @@ int CCompas::i_GetCoordY()
 }
 
 /**
-* METHODE : <CMoteur>::<f_moveRobot>
-* PRESENTATION : <Move the robot>
+* METHODE : <CCompas>::<f_SetCoordY>
+* PRESENTATION : <set coord Y>
 *
-*	<p_capteur> : <objet capteur> *
-	<p_compas> : <objet compas> *
-	<p_commande> : <objet commande> *
+*	<i_CY> : <value that is going to be set to coord Y> *
 *
-* RETOUR : <bool> : <Si le robot à avancer avec succès>
+* RETOUR : <bool> : <Si le robot le changement a été fait avec succes>
 *
 **/
 bool CCompas::f_SetCoordY(int i_CY)

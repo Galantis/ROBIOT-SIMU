@@ -11,10 +11,15 @@ using namespace std;
 *
 * METHODES PUBLIQUES :
 * CCommande() : Constructeur de CCommande
-* CComande(int i_X, int i_Y) : Constructeur de CCommande
-* ~CCommande() : Destructeur de CCommande
+*~CCommande() : Destructeur de CCommande
 * bool CComande::Ouverturefichier_nbr_arbre() : Ouvre le fichier de coordonées des arbres
-* bool CComande ::f_Set_abres_cordonne(int i_coordX, int i_coordY, char i_val) : Initialise le tableau de coordonées
+* bool CComande ::f_Set_abres_cordonne(int i_coordX, int i_coordY, char i_val) : initalise le tableau i_arbres_cordonne
+* bool CComande::f_Get_abres_cordonne_X() :recupere le cordonne Y de l'arbre 
+* int CComande::f_Get_abres_cordonne_X() : recupere le cordonne X de l'arbre
+* bool CComande::f_setActualLigne(int i_aLigne) : passe à l'arbre suivant>
+* int CComande::i_getActualLigne : retourne la valeur de la ligne
+* int CComande::i_nbr_arbre_max(): retourne la valeur du niombre d'arbres max
+*
 * OBSERVATIONS : **************************************************************/
 
 CComande::CComande()
@@ -24,6 +29,8 @@ CComande::CComande()
     i_size_max_Y = SIZE_MAX_X;
     i_nombres_abres = 0;
 }
+
+
 
 CComande::CComande(int i_X, int i_Y)
 {
@@ -167,7 +174,6 @@ bool CComande::f_setActualLigne(int i_aLigne){
 * METHODE : <CComande>::<i_getActualLigne>
 * PRESENTATION : < retourne la valeur >
 *
-
 *
 * RETOUR : <i_actualLigne> : <numéro actuel de la ligne>
 *
