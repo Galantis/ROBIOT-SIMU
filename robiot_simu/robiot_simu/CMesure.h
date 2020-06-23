@@ -1,5 +1,5 @@
 #pragma once
-#define TIME 50 //Smiul temps d'attente de 5 min
+#define TIME 50 //S0 ms temps d'attente de 5 min
 
 class CMesure
 {

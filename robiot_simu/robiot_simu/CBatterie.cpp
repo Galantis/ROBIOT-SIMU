@@ -96,22 +96,3 @@ bool CBatterie::f_SetDataBatterie(int i_Dt)
 		return true;
 	}
 }
-
-/**
-* METHODE : <CBatterie>::i_GetDataBatterie
-* PRESENTATION : <Fait la mesure>
-*
-* RETOUR : <bool> : <Retourne vrai si DoMesure a été effectué la mesure et faux sinon>
-*
-**/
-bool CBatterie::f_GetChargeBatterie()
-{
-	int val;
-
-	Sleep(TIME);
-
-	val = rand();
-
-	return f_SetStateBatterie(val);
-}
-

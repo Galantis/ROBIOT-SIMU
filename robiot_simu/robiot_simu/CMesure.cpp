@@ -136,9 +136,9 @@ bool CMesure::f_DoMesure()
 
 	f_SetStateMesure(1);
 
-	Sleep(TIME);
+	Sleep(TIME);//TIMME est plus cours pour simuler et pas attendre 5 min
 
-	val = rand();
+	val = 1;//mesure faites
 
 	f_SetStateMesure(0);
 
